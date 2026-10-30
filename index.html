@@ -3,24 +3,203 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Landing</title>
+<title>Laura El Shatanofy · Igienista Dentale a Morbegno</title>
+<meta name="description" content="Laura El Shatanofy, igienista dentale a Morbegno da 15 anni. Visite in italiano, arabo e inglese, igiene per adulti e bambini, guide e consigli per un sorriso sano.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-<nav><span class="logo">Logo</span><button class="menu-btn" aria-label="Menu">☰</button></nav>
+
+<header class="site-header">
+  <nav class="nav container" aria-label="Navigazione principale">
+    <a class="logo" href="#top">🦷 Laura El&nbsp;Shatanofy</a>
+    <button class="menu-btn" id="menu-btn" aria-label="Apri il menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+    <div class="nav-links" id="nav-links">
+      <a class="nav-link" href="#chi-sono">Chi sono</a>
+      <a class="nav-link" href="#servizi">Servizi</a>
+      <a class="nav-link" href="#bambini">Bambini</a>
+      <a class="nav-link" href="#articoli">Articoli</a>
+      <a class="nav-link" href="#prodotti">Prodotti</a>
+      <a class="nav-link" href="#contatti">Contatti</a>
+      <a class="nav-link nav-cta" href="https://www.instagram.com/igienista_laura_el_shatanofy" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </nav>
 </header>
-<section class="hero">
-<h1>Il tuo prodotto straordinario</h1>
-<p>Una frase che spiega cosa fai e per chi.</p>
-<a class="cta" href="#features">Scopri di più</a>
-</section>
-<section id="features" class="grid">
-<div class="card"><h3>Veloce</h3><p>Descrizione del beneficio.</p></div>
-<div class="card"><h3>Semplice</h3><p>Descrizione del beneficio.</p></div>
-<div class="card"><h3>Potente</h3><p>Descrizione del beneficio.</p></div>
-</section>
-<footer><p>© 2026 — Creato con Shenron</p></footer>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <p class="badge">📍 Morbegno · Valtellina</p>
+    <h1>Un sorriso sano<br>parla ogni lingua</h1>
+    <p class="hero-tagline" id="tagline">Sono Laura, igienista dentale da 15 anni. Curo il tuo sorriso in italiano, arabo e inglese, con la stessa filosofia: prevenire prima di curare.</p>
+    <div class="chips" aria-label="Lingue parlate">
+      <span class="chip">🇮🇹 Italiano</span>
+      <span class="chip">🇪🇬 Arabo</span>
+      <span class="chip">🇬🇧 Inglese</span>
+      <span class="chip">15+ anni di esperienza</span>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn--primary" href="#servizi">Scopri i servizi</a>
+      <a class="btn btn--ghost" href="https://www.instagram.com/igienista_laura_el_shatanofy" target="_blank" rel="noopener">Scrivimi su Instagram</a>
+    </div>
+  </section>
+
+  <!-- CHI SONO -->
+  <section class="section" id="chi-sono">
+    <div class="container">
+      <h2 class="section-title">Chi sono</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p id="bio">Sono Laura El Shatanofy, igienista dentale con origini egiziane e un cuore che batte per la prevenzione. Da 15 anni accompagno le famiglie di Morbegno e della Valtellina verso un'igiene orale consapevole: credo che un sorriso sano nasca dalle buone abitudini di ogni giorno, non solo dalla poltrona.
+
+Parlo italiano, arabo e inglese, così ogni paziente può raccontarmi i suoi bisogni nella propria lingua. Il mio impegno preferito? Educare i più piccoli: trasformare la prima visita in un gioco è il modo migliore per costruire sorrisi senza paura.</p>
+        </div>
+        <div class="about-stats">
+          <div class="stat"><span class="stat-num">15+</span><span class="stat-label">anni di esperienza</span></div>
+          <div class="stat"><span class="stat-num">3</span><span class="stat-label">lingue: italiano, arabo, inglese</span></div>
+          <div class="stat"><span class="stat-num">1.000+</span><span class="stat-label">trattamenti di igiene</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIZI -->
+  <section class="section section--alt" id="servizi">
+    <div class="container">
+      <h2 class="section-title">I miei servizi</h2>
+      <p class="section-sub">Cura professionale per adulti e bambini, su appuntamento, in tre lingue.</p>
+      <div class="grid">
+        <div class="card"><span class="card-icon">🪥</span><h3>Igiene professionale</h3><p>Rimozione di tartaro e placca, lucidatura e piano di igiene orale personalizzato.</p></div>
+        <div class="card"><span class="card-icon">🧒</span><h3>Prima visita dei bambini</h3><p>Un appuntamento giocoso e senza paura: il piccolo impara spazzolino e filo come in un gioco.</p></div>
+        <div class="card"><span class="card-icon">✨</span><h3>Sbiancamento</h3><p>Trattamenti schiarenti professionali, sicuri e graduali, con consulenza su sensibilità e risultati.</p></div>
+        <div class="card"><span class="card-icon">🛡️</span><h3>Sigillature e prevenzione</h3><p>Protezione dei molari nei bambini e prevenzione mirata di carie e gengiviti.</p></div>
+        <div class="card"><span class="card-icon">📚</span><h3>Educazione e laboratori</h3><p>Lezioni di igiene orale per famiglie e scuole: prendersi cura del sorriso si impara.</p></div>
+        <div class="card"><span class="card-icon">🌍</span><h3>Visite in tre lingue</h3><p>Consigli e colloqui in italiano, arabo e inglese: capirsi è il primo passo della cura.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BAMBINI -->
+  <section class="kids" id="bambini">
+    <div class="container kids-grid">
+      <div>
+        <p class="badge badge--light">💛 Dedicato ai più piccoli</p>
+        <h2 class="section-title">I bambini sono i miei pazienti preferiti</h2>
+        <p class="kids-intro">La poltrona non deve far paura: con il metodo «racconto, mostro, faccio», ogni visita diventa un gioco da rifare volentieri.</p>
+        <ul class="kids-list">
+          <li>Prima visita trasformata in gioco, senza fretta e senza paura</li>
+          <li>Spazzolino e filo interdentale insegnati con prove pratiche</li>
+          <li>Consigli su alimentazione e abitudini quotidiane</li>
+          <li>Un piccolo premio a fine visita per partire col piede giusto</li>
+        </ul>
+        <a class="btn btn--primary" href="https://www.instagram.com/igienista_laura_el_shatanofy" target="_blank" rel="noopener">Prenota la prima visita del tuo bimbo</a>
+      </div>
+      <div class="kids-panel" aria-hidden="true">
+        <span class="kids-emoji">🧒🦷</span>
+        <p>«Educare un bambino oggi è regalargli un sorriso per tutta la vita.»</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICOLI -->
+  <section class="section" id="articoli">
+    <div class="container">
+      <h2 class="section-title">Articoli e guide</h2>
+      <p class="section-sub">Consigli pratici scritti da Laura: per il bagno di ogni giorno e per la salute della famiglia.</p>
+      <div class="grid" id="articoli-grid">
+        <article class="article-card" data-id="a1" tabindex="0" role="button" aria-label="Leggi: Come lavare i denti ai bambini (senza drammi)">
+          <p class="article-tag">Guide per famiglie</p>
+          <h3 class="article-title">Come lavare i denti ai bambini (senza drammi)</h3>
+          <p class="article-excerpt">Spazzolino morbido, due minuti due volte al giorno e tanto gioco: le regole d'oro per un'igiene davvero efficace…</p>
+          <span class="article-more">Leggi tutto →</span>
+        </article>
+        <article class="article-card" data-id="a2" tabindex="0" role="button" aria-label="Leggi: Scovolino o filo interdentale? Come scegliere">
+          <p class="article-tag">Consigli utili</p>
+          <h3 class="article-title">Scovolino o filo interdentale? Come scegliere</h3>
+          <p class="article-excerpt">Non tutti gli spazi interdentali sono uguali: ecco come capire quale strumento fa per te e come usarlo bene…</p>
+          <span class="article-more">Leggi tutto →</span>
+        </article>
+        <article class="article-card" data-id="a3" tabindex="0" role="button" aria-label="Leggi: 5 segnali che devi prenotare una pulizia">
+          <p class="article-tag">Prevenzione</p>
+          <h3 class="article-title">5 segnali che devi prenotare una pulizia</h3>
+          <p class="article-excerpt">Gengive che sanguinano, alito persistente, tartaro visibile: il corpo ci parla, impariamo ad ascoltarlo…</p>
+          <span class="article-more">Leggi tutto →</span>
+        </article>
+      </div>
+      <p class="empty" id="articoli-empty" hidden>Nessun articolo pubblicato per ora: torna presto a trovarmi! 😊</p>
+    </div>
+  </section>
+
+  <!-- PRODOTTI CONSIGLIATI -->
+  <section class="section section--alt" id="prodotti">
+    <div class="container">
+      <h2 class="section-title">Prodotti che consiglio davvero</h2>
+      <p class="section-sub">Gli strumenti che uso e raccomando ai miei pazienti, con link ad Amazon per acquistarli.</p>
+      <div class="grid" id="prodotti-grid">
+        <article class="product-card">
+          <div class="product-icon">🪥</div>
+          <h3 class="product-name">Spazzolino elettrico sonico</h3>
+          <p class="product-desc">Pulizia delicata ed efficace: perfetto per chi vuole passare al elettrico.</p>
+          <a class="product-link" href="https://www.amazon.it/s?k=spazzolino+elettrico+sonico" target="_blank" rel="noopener nofollow">Vedi su Amazon →</a>
+        </article>
+        <article class="product-card">
+          <div class="product-icon">🧵</div>
+          <h3 class="product-name">Scovolini interdentali</h3>
+          <p class="product-desc">Indispensabili per gli spazi tra i denti: chiedimi la misura giusta per te.</p>
+          <a class="product-link" href="https://www.amazon.it/s?k=scovolini+interdentali" target="_blank" rel="noopener nofollow">Vedi su Amazon →</a>
+        </article>
+        <article class="product-card">
+          <div class="product-icon">🦷</div>
+          <h3 class="product-name">Filo interdentale in seta</h3>
+          <p class="product-desc">Per gli spazi stretti: scorrevole, resistente e gentile con le gengive.</p>
+          <a class="product-link" href="https://www.amazon.it/s?k=filo+interdentale" target="_blank" rel="noopener nofollow">Vedi su Amazon →</a>
+        </article>
+        <article class="product-card">
+          <div class="product-icon">🧒</div>
+          <h3 class="product-name">Spazzolino bambini con timer</h3>
+          <p class="product-desc">Setole morbide e timer integrato: due minuti di pulizia diventano un gioco.</p>
+          <a class="product-link" href="https://www.amazon.it/s?k=spazzolino+bambini+timer" target="_blank" rel="noopener nofollow">Vedi su Amazon →</a>
+        </article>
+      </div>
+      <p class="affiliate-note">I link ad Amazon sono consigli sinceri: come Affiliato Amazon, Laura riceve un guadagno dagli acquisti idonei, senza costi extra per te.</p>
+    </div>
+  </section>
+
+  <!-- CONTATTI -->
+  <section class="section" id="contatti">
+    <div class="container container--narrow">
+      <h2 class="section-title">Contatti</h2>
+      <div class="contact-card">
+        <ul class="contact-list">
+          <li class="contact-row"><span class="contact-icon">📍</span><span>Studio a Morbegno (SO), Valtellina — su appuntamento</span></li>
+          <li class="contact-row" id="tel-row" hidden><span class="contact-icon">📞</span><a id="tel-link" href=""></a></li>
+          <li class="contact-row" id="email-row" hidden><span class="contact-icon">✉️</span><a id="email-link" href=""></a></li>
+          <li class="contact-row"><span class="contact-icon">📸</span><a href="https://www.instagram.com/igienista_laura_el_shatanofy" target="_blank" rel="noopener">@igienista_laura_el_shatanofy</a></li>
+        </ul>
+        <a class="btn btn--primary" href="https://www.instagram.com/igienista_laura_el_shatanofy" target="_blank" rel="noopener">Scrivimi su Instagram</a>
+        <p class="muted">Rispondo in italiano, arabo e inglese. Le vie di comunicazione più veloce: messaggio diretto su Instagram.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>© 2026 Laura El Shatanofy · Igienista Dentale a Morbegno</p>
+  <a class="footer-admin" href="admin.html">Area riservata</a>
+</footer>
+
+<!-- MODALE ARTICOLO -->
+<div class="modal" id="articolo-modal" role="dialog" aria-modal="true" aria-labelledby="modal-titolo">
+  <div class="modal-card">
+    <button class="modal-close" id="modal-close" aria-label="Chiudi articolo">✕</button>
+    <p class="article-tag" id="modal-categoria"></p>
+    <h3 id="modal-titolo"></h3>
+    <p class="article-date" id="modal-data"></p>
+    <div class="modal-body" id="modal-testo"></div>
+  </div>
+</div>
+
 <script src="script.js"></script>
 </body>
 </html>

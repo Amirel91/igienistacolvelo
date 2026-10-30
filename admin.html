@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Area riservata · Laura El Shatanofy</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="admin">
+
+<!-- LOGIN -->
+<section class="admin-login" id="login-view">
+  <form class="login-card" id="login-form">
+    <h1>🔐 Area riservata</h1>
+    <p class="muted">Inserisci la password per gestire i contenuti del sito.</p>
+    <div class="field">
+      <label for="login-pass">Password</label>
+      <input type="password" id="login-pass" autocomplete="current-password" required>
+    </div>
+    <button class="btn btn--primary" type="submit">Entra</button>
+    <p class="msg" id="login-msg" role="status"></p>
+    <p class="hint">Password demo: <strong>igienista2026</strong> — modificabile nel file admin.js</p>
+    <a class="footer-admin" href="index.html">← Torna al sito</a>
+  </form>
+</section>
+
+<!-- PANNELLO ADMIN -->
+<div class="admin-shell" id="admin-view" hidden>
+  <header class="admin-header">
+    <h1 class="admin-title">Gestione contenuti</h1>
+    <div class="admin-actions">
+      <a class="btn btn--outline" href="index.html" target="_blank" rel="noopener">Vedi il sito</a>
+      <button class="btn btn--danger" id="btn-logout" type="button">Esci</button>
+    </div>
+  </header>
+
+  <nav class="tabs" aria-label="Sezioni di gestione">
+    <button class="tab-btn active" data-tab="presentazione" type="button">Presentazione</button>
+    <button class="tab-btn" data-tab="articoli" type="button">Articoli</button>
+    <button class="tab-btn" data-tab="prodotti" type="button">Prodotti</button>
+    <button class="tab-btn" data-tab="backup" type="button">Backup</button>
+  </nav>
+
+  <main class="admin-main">
+
+    <!-- PRESENTAZIONE -->
+    <section class="admin-panel" id="tab-presentazione">
+      <form class="admin-form" id="form-presentazione">
+        <div class="field">
+          <label for="pres-tagline">Frase di presentazione (hero)</label>
+          <textarea id="pres-tagline" rows="3" required></textarea>
+        </div>
+        <div class="field">
+          <label for="pres-bio">Biografia — sezione «Chi sono»</label>
+          <textarea id="pres-bio" rows="8" required></textarea>
+        </div>
+        <div class="form-grid">
+          <div class="field">
+            <label for="pres-telefono">Telefono (opzionale)</label>
+            <input type="tel" id="pres-telefono" placeholder="+39 0342 ...">
+          </div>
+          <div class="field">
+            <label for="pres-email">Email (opzionale)</label>
+            <input type="email" id="pres-email" placeholder="laura@esempio.it">
+          </div>
+        </div>
+        <button class="btn btn--primary" type="submit">Salva presentazione</button>
+        <p class="msg" id="pres-msg" role="status"></p>
+      </form>
+    </section>
+
+    <!-- ARTICOLI -->
+    <section class="admin-panel" id="tab-articoli" hidden>
+      <form class="admin-form" id="form-articolo">
+        <input type="hidden" id="art-id">
+        <div class="form-grid">
+          <div class="field">
+            <label for="art-titolo">Titolo</label>
+            <input type="text" id="art-titolo" required>
+          </div>
+          <div class="field">
+            <label for="art-categoria">Categoria</label>
+            <input type="text" id="art-categoria" placeholder="Guide per famiglie, Consigli…" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="art-img">Immagine URL (opzionale)</label>
+          <input type="url" id="art-img" placeholder="https://…">
+        </div>
+        <div class="field">
+          <label for="art-testo">Testo dell'articolo</label>
+          <textarea id="art-testo" rows="10" required placeholder="Scrivi qui il contenuto… lascia una riga vuota tra i paragrafi."></textarea>
+        </div>
+        <label class="check"><input type="checkbox" id="art-pubblicato" checked> Pubblicato (visibile sul sito)</label>
+        <div class="admin-actions">
+          <button class="btn btn--primary" type="submit">Salva articolo</button>
+          <button class="btn btn--outline" type="button" id="art-annulla" hidden>Annulla modifica</button>
+        </div>
+      </form>
+      <h2 class="admin-subtitle">Articoli esistenti</h2>
+      <ul class="admin-list" id="lista-articoli"></ul>
+    </section>
+
+    <!-- PRODOTTI -->
+    <section class="admin-panel" id="tab-prodotti" hidden>
+      <form class="admin-form" id="form-prodotto">
+        <input type="hidden" id="pro-id">
+        <div class="form-grid">
+          <div class="field">
+            <label for="pro-nome">Nome prodotto</label>
+            <input type="text" id="pro-nome" required>
+          </div>
+          <div class="field">
+            <label for="pro-icona">Icona emoji</label>
+            <input type="text" id="pro-icona" placeholder="🦷" maxlength="4">
+          </div>
+        </div>
+        <div class="field">
+          <label for="pro-descrizione">Descrizione breve</label>
+          <input type="text" id="pro-descrizione" required>
+        </div>
+        <div class="field">
+          <label for="pro-link">Link Amazon</label>
+          <input type="url" id="pro-link" required placeholder="https://www.amazon.it/…">
+        </div>
+        <div class="admin-actions">
+          <button class="btn btn--primary" type="submit">Salva prodotto</button>
+          <button class="btn btn--outline" type="button" id="pro-annulla" hidden>Annulla modifica</button>
+        </div>
+      </form>
+      <h2 class="admin-subtitle">Prodotti esistenti</h2>
+      <ul class="admin-list" id="lista-prodotti"></ul>
+    </section>
+
+    <!-- BACKUP -->
+    <section class="admin-panel" id="tab-backup" hidden>
+      <div class="admin-form">
+        <h2 class="admin-subtitle">Salva e trasferisci i contenuti</h2>
+        <p class="muted">I contenuti sono salvati in <strong>questo browser</strong>. Per vederli su un altro computer (o dopo una pulizia del browser), esporta un file di backup e reimportalo dove ti serve.</p>
+        <div class="admin-actions">
+          <button class="btn btn--primary" id="btn-export" type="button">⬇ Esporta backup (JSON)</button>
+          <label class="btn btn--outline file-label">⬆ Importa backup
+            <input type="file" id="import-file" accept="application/json,.json" hidden>
+          </label>
+          <button class="btn btn--danger" id="btn-reset" type="button">↺ Ripristina contenuti iniziali</button>
+        </div>
+        <p class="msg" id="backup-msg" role="status"></p>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>
