@@ -19,7 +19,7 @@
     </div>
     <button class="btn btn--primary" type="submit">Entra</button>
     <p class="msg" id="login-msg" role="status"></p>
-    <p class="hint">Password demo: <strong>igienista2026</strong> — modificabile nel file admin.js</p>
+    <p class="hint">Password demo: <strong>igienista2026</strong> — modificabile nel file script.js</p>
     <a class="footer-admin" href="index.html">← Torna al sito</a>
   </form>
 </section>
@@ -27,7 +27,7 @@
 <!-- PANNELLO ADMIN -->
 <div class="admin-shell" id="admin-view" hidden>
   <header class="admin-header">
-    <h1 class="admin-title">Gestione contenuti</h1>
+    <h1 class="admin-title">Gestione contenuti 🦷</h1>
     <div class="admin-actions">
       <a class="btn btn--outline" href="index.html" target="_blank" rel="noopener">Vedi il sito</a>
       <button class="btn btn--danger" id="btn-logout" type="button">Esci</button>
@@ -51,7 +51,7 @@
           <textarea id="pres-tagline" rows="3" required></textarea>
         </div>
         <div class="field">
-          <label for="pres-bio">Biografia — sezione «Chi sono»</label>
+          <label for="pres-bio">Biografia — sezione «Chi sono» (riga vuota = nuovo paragrafo)</label>
           <textarea id="pres-bio" rows="8" required></textarea>
         </div>
         <div class="form-grid">
@@ -92,10 +92,11 @@
           <textarea id="art-testo" rows="10" required placeholder="Scrivi qui il contenuto… lascia una riga vuota tra i paragrafi."></textarea>
         </div>
         <label class="check"><input type="checkbox" id="art-pubblicato" checked> Pubblicato (visibile sul sito)</label>
-        <div class="admin-actions">
+        <div class="admin-actions admin-actions--form">
           <button class="btn btn--primary" type="submit">Salva articolo</button>
           <button class="btn btn--outline" type="button" id="art-annulla" hidden>Annulla modifica</button>
         </div>
+        <p class="msg" id="art-msg" role="status"></p>
       </form>
       <h2 class="admin-subtitle">Articoli esistenti</h2>
       <ul class="admin-list" id="lista-articoli"></ul>
@@ -123,10 +124,11 @@
           <label for="pro-link">Link Amazon</label>
           <input type="url" id="pro-link" required placeholder="https://www.amazon.it/…">
         </div>
-        <div class="admin-actions">
+        <div class="admin-actions admin-actions--form">
           <button class="btn btn--primary" type="submit">Salva prodotto</button>
           <button class="btn btn--outline" type="button" id="pro-annulla" hidden>Annulla modifica</button>
         </div>
+        <p class="msg" id="pro-msg" role="status"></p>
       </form>
       <h2 class="admin-subtitle">Prodotti esistenti</h2>
       <ul class="admin-list" id="lista-prodotti"></ul>
@@ -137,7 +139,7 @@
       <div class="admin-form">
         <h2 class="admin-subtitle">Salva e trasferisci i contenuti</h2>
         <p class="muted">I contenuti sono salvati in <strong>questo browser</strong>. Per vederli su un altro computer (o dopo una pulizia del browser), esporta un file di backup e reimportalo dove ti serve.</p>
-        <div class="admin-actions">
+        <div class="admin-actions admin-actions--form">
           <button class="btn btn--primary" id="btn-export" type="button">⬇ Esporta backup (JSON)</button>
           <label class="btn btn--outline file-label">⬆ Importa backup
             <input type="file" id="import-file" accept="application/json,.json" hidden>
@@ -151,6 +153,6 @@
   </main>
 </div>
 
-<script src="admin.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
