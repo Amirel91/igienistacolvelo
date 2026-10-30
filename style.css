@@ -1,0 +1,11 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: system-ui, sans-serif; color: #0f172a; }
+header { position: sticky; top: 0; background: #fff; box-shadow: 0 1px 8px rgba(0,0,0,.08); }
+nav { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; }
+.logo { font-weight: 700; color: #10b981; }
+.hero { text-align: center; padding: 5rem 1.5rem; background: linear-gradient(160deg, #0f172a, #14532d); color: #fff; }
+.hero h1 { font-size: clamp(1.8rem, 5vw, 3rem); margin-bottom: 1rem; }
+.cta { display: inline-block; margin-top: 1.5rem; background: #10b981; color: #04110b; padding: .8rem 1.8rem; border-radius: 10px; text-decoration: none; font-weight: 600; }
+.grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); max-width: 960px; margin: 3rem auto; padding: 0 1.5rem; }
+.card { border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; }
+footer { text-align: center; padding: 2rem; color: #64748b; }
